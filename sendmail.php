@@ -1,27 +1,30 @@
 <?php
 
-	/*
-	This script will send an email with the PHP mail function.
-	It needs a working sendmail configuration.
-	*/
+/**
+* This script will send an email with the PHP mail function. It needs a working sendmail configuration.
+*
+* @author     Giovanni Rizzotti
+* @version    1.0
+* ...
+*/
 
-	function escape($value)
-	{
-    	$search = array("\\",  "\x00", "\n",  "\r",  "'",  '"', "\x1a");
-    	$replace = array("\\\\","\\0","\\n", "\\r", "\'", '\"', "\\Z");
+function escape($value)
+{
+  $search = array("\\",  "\x00", "\n",  "\r",  "'",  '"', "\x1a");
+  $replace = array("\\\\","\\0","\\n", "\\r", "\'", '\"', "\\Z");
 
-    	return str_replace($search, $replace, $value);
-	}
+  return str_replace($search, $replace, $value);
+}
 
-    $name = escape($_POST['name']);
-    $mailFrom = escape($_POST['emailFrom']);
-    $subject = escape($_POST['subject']);
-    $message = escape($_POST['message']);
-    $emailTo = 'yourdesiredaddress@gmail.com';
+$name = escape($_POST['name']);
+$mailFrom = escape($_POST['emailFrom']);
+$subject = escape($_POST['subject']);
+$message = escape($_POST['message']);
+$emailTo = 'yourdesiredaddress@gmail.com';
 
-    $header = "From:" . $mailFrom;
-    $error = !mail($emailTo, $subject, $message, $header);
+$header = "From:" . $mailFrom;
+$error = !mail($emailTo, $subject, $message, $header);
 
-    $result = array('error' => $error); 
-    echo json_encode($result);
+$result = array('error' => $error); 
+echo json_encode($result);
 ?>
