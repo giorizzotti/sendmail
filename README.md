@@ -28,5 +28,5 @@ The next step is to execut an **AJAX** script to send the request string to the 
 ###The PHP script:
 It includes an escape function to enforce security for each of the four parameters.
 Don't forget to change the **$emailTo** value with your desired recipient address.
-The script will return **TRUE** if the email was sent or **FALSE** in case of errors. These values are used by the AJAX script to show a result message.
+The script will return the error status (**TRUE** if an error occurs or **FALSE** if the email was sent). These values are used by the AJAX script to show a result message.
 
