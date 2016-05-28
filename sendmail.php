@@ -27,4 +27,5 @@ $error = !mail($emailTo, $subject, $message, $header);
 
 $result = array('error' => $error); 
 echo json_encode($result);
+
 ?>

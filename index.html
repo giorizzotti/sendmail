@@ -1,0 +1,47 @@
+<html>
+
+<head>
+<title>Simple contact form</title>
+
+<!-- INCLUDE THE SENDMAIL.JS -->
+<script src="sendmail.js"></script>
+
+<!-- INCLUDE JQUERY -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+<!-- Include CSS File Here -->
+<link rel="stylesheet" href="style.css"/>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="main">  
+      <form action="#" method="post" name="form_name" id="form">
+        <h2>Simple contact form</h2>
+        <fieldset>
+          <input placeholder="Your name" type="text" tabindex="1" required autofocus id="name">
+        </fieldset>
+        <fieldset>
+          <input placeholder="Your Email Address" type="email" tabindex="2" required id="email">
+        </fieldset>
+        <fieldset>
+          <input placeholder="Subject" type="text" tabindex="3" required id="subject">
+        </fieldset>
+        <fieldset>
+          <textarea placeholder="Type your Message Here...." tabindex="4" required id="message" rows="4" cols="50"></textarea>
+        </fieldset>
+        <fieldset>
+        	<input type="button" name="submit" id="submit" value="Send email" onclick="submit_id()"/>
+        </fieldset>
+      </form>
+
+      <div id="container_result" style="display: none;">
+        <h2 id="message_result">RESULT</h2>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
