@@ -2,6 +2,8 @@
 
 This repository includes a simple HTML form (with a CSS style), a javascript file and a PHP script. This system allows you to create a webpage with which an user can interact to send an email (thanks to the Sendmail Email server).
 
+![Webpage](https://github.com/giorizzotti/simplest-sendmail-system/blob/master/Simple%20Contact%20Form.png)
+
 ##Requirements:
 * A working installation of PHP (>= 4.0);
 * A working installation of Sendmail;
