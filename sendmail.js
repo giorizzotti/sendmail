@@ -1,5 +1,6 @@
 /*
 Simplest js lib to provide an email sending system with SENDMAIL.
+https://github.com/giorizzotti/simplest-sendmail-system
 @Author Giovanni Rizzotti - www.giovannirizzotti.com
 */
 function isValidEmail(emailAddress) {
@@ -21,20 +22,14 @@ function submit_id() {
             data: dataString,
             success: function (response) {
                 $("#container_result").css({ display: "block" });
-                //document.getElementById('container_result').style.display = 'block';
                 if (!response.error)
                     $('#message_result').html("The email was sent!");
-                    //document.getElementById("message_result").textContent  = "The email was sent";
                 else 
                     $('#message_result').html("The email was not sent due to an error!");
-                    //document.getElementById("message_result").textContent  = "The email was not sent due to an error!";
             }
         });
     } else {
         $("#container_result").css({ display: "block" });
-        //document.getElementById('container_result').style.display = 'block';
-        //document.getElementById("message_result").textContent  = "Check the email address and the other fields!";
         $('#message_result').html("Check the email address and the other fields!");
-
     }
 };
